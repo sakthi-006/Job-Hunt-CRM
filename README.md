@@ -1,16 +1,93 @@
-# React + Vite
+# 🚀 Job Hunt CRM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based Job Application Tracker that helps job seekers organize and monitor their applications in one place.
 
-Currently, two official plugins are available:
+Designed with a modern glassmorphism UI, animated background, reusable React components, and localStorage support.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ Add New Job Applications
 
-## Expanding the ESLint configuration
+✅ Delete Applications
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Search Companies
+
+✅ Dashboard Statistics
+
+- Total Applications
+- Interviews
+- Offers
+- Rejected
+
+✅ Local Storage Support
+
+✅ Responsive Design
+
+✅ Animated Glassmorphism UI
+
+✅ Modern Dashboard Layout
+
+---
+
+## 🛠 Tech Stack
+
+- React.js
+- JavaScript (ES6)
+- CSS3
+- HTML5
+- Framer Motion
+- React Icons
+- Local Storage
+
+---
+
+## 📂 Project Structure
+
+src/
+
+├── Components/
+
+│ ├── Navbar.jsx
+
+│ ├── DashboardCards.jsx
+
+│ ├── SearchBar.jsx
+
+│ ├── AddJobForm.jsx
+
+│ ├── JobTable.jsx
+
+│
+
+├── Pages/
+
+│ └── Dashboard.jsx
+
+│
+
+├── Styles/
+
+│ ├── Dashboard.css
+
+│ └── Navbar.css
+
+│
+
+├── App.jsx
+
+└── main.jsx
+
+---
+
+
+## Deployment Link
+https://job-hunt-crm-8v56.vercel.app/
+
+## 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/job-hunt-crm.git
