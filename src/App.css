@@ -1,0 +1,280 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:"Poppins",sans-serif;
+
+  background:#020617;
+
+  color:white;
+
+  min-height:100vh;
+
+  overflow-x:hidden;
+
+  position:relative;
+
+}
+
+/* ===========================
+   AURORA BACKGROUND
+=========================== */
+
+.aurora{
+
+  position:fixed;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  opacity:.45;
+
+  pointer-events:none;
+
+  z-index:-3;
+
+  animation:auroraMove 18s ease-in-out infinite alternate;
+
+}
+
+.aurora1{
+
+  background:#38bdf8;
+
+  top:-250px;
+
+  left:-180px;
+
+}
+
+.aurora2{
+
+  background:#8b5cf6;
+
+  top:150px;
+
+  right:-220px;
+
+  animation-duration:22s;
+
+}
+
+.aurora3{
+
+  background:#ec4899;
+
+  bottom:-250px;
+
+  left:35%;
+
+  animation-duration:20s;
+
+}
+
+/* ===========================
+   GRID OVERLAY
+=========================== */
+
+.grid-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:-2;
+
+  background-image:
+
+  linear-gradient(
+    rgba(255,255,255,.03) 1px,
+    transparent 1px
+  ),
+
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,.03) 1px,
+    transparent 1px
+  );
+
+  background-size:45px 45px;
+
+  mask-image:
+  radial-gradient(
+    circle,
+    black 45%,
+    transparent 100%
+  );
+
+}
+
+/* ===========================
+   FLOATING GLOW
+=========================== */
+
+.glow{
+
+  position:fixed;
+
+  width:350px;
+
+  height:350px;
+
+  border-radius:50%;
+
+  background:
+  rgba(56,189,248,.18);
+
+  filter:blur(110px);
+
+  top:20%;
+
+  left:10%;
+
+  z-index:-1;
+
+  animation:floatGlow 12s ease-in-out infinite alternate;
+
+  pointer-events:none;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes auroraMove{
+
+  0%{
+
+    transform:
+    translate(0,0)
+    scale(1);
+
+  }
+
+  25%{
+
+    transform:
+    translate(120px,-80px)
+    scale(1.15);
+
+  }
+
+  50%{
+
+    transform:
+    translate(-100px,120px)
+    scale(.95);
+
+  }
+
+  75%{
+
+    transform:
+    translate(150px,80px)
+    scale(1.08);
+
+  }
+
+  100%{
+
+    transform:
+    translate(-80px,-120px)
+    scale(1);
+
+  }
+
+}
+
+@keyframes floatGlow{
+
+  0%{
+
+    transform:
+    translate(0,0);
+
+  }
+
+  100%{
+
+    transform:
+    translate(420px,260px);
+
+  }
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+  width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+  background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:#38bdf8;
+
+  border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+  background:#0ea5e9;
+
+}
+
+/* ===========================
+   SELECTION
+=========================== */
+
+::selection{
+
+  background:#38bdf8;
+
+  color:white;
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media (prefers-reduced-motion:reduce){
+
+  .aurora,
+  .glow{
+
+    animation:none;
+
+  }
+
+}

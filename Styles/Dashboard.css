@@ -1,0 +1,402 @@
+/* ===========================
+   DASHBOARD CONTAINER
+=========================== */
+
+.dashboard-container{
+  width:95%;
+  max-width:1500px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.dashboard-header{
+  padding-top: 40px;
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.dashboard-header h1{
+  text-align: center;
+  font-size:3.5rem;
+  font-weight:700;
+
+  background:linear-gradient(
+    135deg,
+    #38bdf8,
+    #8b5cf6
+  );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.dashboard-header p{
+  color:#cbd5e1;
+  font-size:1.1rem;
+  margin-top:10px;
+}
+
+/* ===========================
+   DASHBOARD CARDS
+=========================== */
+
+.cards-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(240px,1fr));
+
+  gap:25px;
+
+  margin-bottom:40px;
+
+}
+
+.dashboard-card{
+
+box-shadow:
+0 10px 40px rgba(0,0,0,.25);
+
+}
+
+.dashboard-card:hover{
+
+box-shadow:
+0 25px 60px rgba(56,189,248,.25);
+
+}
+
+.dashboard-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:220px;
+  height:220px;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(56,189,248,.20),
+    transparent
+  );
+
+  top:-80px;
+  right:-80px;
+
+  transition:.5s;
+
+}
+
+.dashboard-card:hover{
+
+  transform:
+  translateY(-10px)
+  scale(1.02);
+
+  box-shadow:
+  0 20px 45px
+  rgba(56,189,248,.25);
+
+}
+
+.dashboard-card:hover::before{
+
+  transform:scale(1.5);
+
+}
+
+.card-icon{
+
+  font-size:2rem;
+
+  color:#38bdf8;
+
+  margin-bottom:15px;
+
+}
+
+.dashboard-card h3{
+
+  color:#cbd5e1;
+
+  font-size:17px;
+
+}
+
+.dashboard-card h1{
+
+  margin-top:10px;
+
+  font-size:2.6rem;
+
+  color:white;
+
+}
+
+/* ===========================
+   SEARCH BAR
+=========================== */
+
+.search-bar{
+
+  margin:35px 0;
+
+}
+.search-bar{
+  width:100%;
+  margin:30px 0;
+}
+
+.search-bar input{
+  width:100%;
+  padding:16px 20px;
+  border-radius:14px;
+  font-size:16px;
+}
+.search-bar input{
+
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+
+  outline:none;
+
+  border-radius:15px;
+
+  background:rgba(255,255,255,.08);
+ -webkit-backdrop-filter:blur(15px);
+  backdrop-filter:blur(15px);
+ 
+
+  color:white;
+
+  font-size:16px;
+
+}
+
+.search-bar input::placeholder{
+
+  color:#94a3b8;
+
+}
+
+/* ===========================
+   CHART
+=========================== */
+
+.chart-card{
+
+  margin-top:40px;
+
+  background:rgba(255,255,255,.08);
+
+  
+  -webkit-backdrop-filter:blur(20px);
+  backdrop-filter:blur(20px);
+  border-radius:20px;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  padding:30px;
+
+}
+
+.chart-card h2{
+
+  text-align:center;
+
+  margin-bottom:20px;
+
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.job-table{
+
+  margin-top:35px;
+
+  background:rgba(255,255,255,.08);
+  -webkit-backdrop-filter:blur(20px);
+  backdrop-filter:blur(20px);
+
+  border-radius:20px;
+
+  padding:25px;
+
+  overflow-x:auto;
+
+}
+
+.job-table table{
+
+  width:100%;
+
+  border-collapse:collapse;
+
+}
+
+.job-table th{
+
+  color:#38bdf8;
+
+  padding:15px;
+
+  text-align:left;
+
+  border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+.job-table td{
+
+  padding:15px;
+
+  border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.job-table tr:hover{
+
+  background:rgba(255,255,255,.04);
+
+}
+
+.empty{
+
+  text-align:center;
+
+  color:#94a3b8;
+
+}
+
+/* ===========================
+   STATUS BADGES
+=========================== */
+
+.status{
+
+  padding:8px 15px;
+
+  border-radius:20px;
+
+  font-size:14px;
+
+  font-weight:bold;
+
+}
+
+.status.applied{
+
+  background:#2563eb;
+
+}
+
+.status.assessment{
+
+  background:#f59e0b;
+
+}
+
+.status.interview{
+
+  background:#8b5cf6;
+
+}
+
+.status.offer{
+
+  background:#22c55e;
+
+}
+
+.status.rejected{
+
+  background:#ef4444;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.delete-btn{
+
+  padding:10px 16px;
+
+  border:none;
+
+  border-radius:10px;
+
+  background:#ef4444;
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+.delete-btn:hover{
+
+  background:#dc2626;
+
+  transform:translateY(-3px);
+
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fadeUp{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+  .dashboard-header h1{
+
+    font-size:2.3rem;
+
+  }
+
+  .cards-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
